@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TodoApp</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+
+<div class="container">
+    <h1 class=" fw-bolder py-5 ">TodoApp</h1>
+
+    <form class=" pb-4">
+        <div class="form-group">
+          <label for="toDoName" class=" py-2">Name : </label>
+          <input type="text" class="form-control w-100" id="toDoName">
+        </div>
+        <div class="alert alert-danger my-2 d-none" id="NameAlert" role="alert">
+         You Should Enter First Litter UpperCase and 3-8 Letters LowerCase
+        </div>
+          <div class="form-group ">
+            <label for="toDoDesc" class=" py-2">Desc : </label>
+            <textarea name="toDoDesc" class="form-control w-100" id="toDoDesc" ></textarea>
+          </div>
+          <div class="alert alert-danger my-2 d-none " id="descAlert" role="alert">
+            You should Enter 20 Letters
+          </div>
+          <div class=" my-3">
+            <button type="button" onclick="addtoDo()" id="add-btn" class=" btn btn-outline-info">Add</button>
+            <button type="button" onclick="changetoDo()" id="ubdate-btn" class=" btn btn-outline-info d-none">Update</button>
+          </div>
+      
+      </form>
+      <div class=" my-3">
+        <label for="Search" class=" py-2">Search...</label>
+        <input type="search" placeholder="Search by Name" onkeyup="searchList(this.value)" class="form-control" id="Search">
+      </div>
+<table class="table text-center">
+<thead>
+    <tr>
+        <td>index</td>
+        <td>Name</td>
+        <td>Desc</td>
+        <td>cheakbox</td>
+        <td>Ubdate</td>
+        <td>Delete</td>
+    </tr>
+</thead>
+<tbody id="tableBody">
+  <div class="form-group">
+
+  </div>
+
+</tbody>
+</table>
+</div>
+
+
+
+
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/script.js"></script>
+</body>
+</html>
